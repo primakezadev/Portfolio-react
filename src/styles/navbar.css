@@ -1,75 +1,97 @@
+/* src/styles/navbar.css */
+
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #ffffff;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  position: fixed; /* Makes it stay in the same place relative to the viewport */
+  top: 0;          /* Positions it at the very top of the viewport */
+  width: 100%;     /* Makes it span the full width of the viewport */
+  background-color: #f0f0f0; /* Your desired background color */
+  padding: 15px 20px; /* Adjust padding as needed */
+  box-shadow: none; /* As discussed, for a cleaner look */
+  z-index: 1000;   /* Ensures it stacks above other content on the page */
 }
 
+/* ... rest of your navbar.css styles ... */
+/* Ensure no other CSS is overriding these properties with !important or later specificity */
 .navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Optional: Constrain width for larger screens, common in designs */
+    margin: 0 auto; /* Center the container if max-width is applied */
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #007bff;
+    font-family: 'Times New Roman', Times, serif; /* Changed to a serif font */
+    font-size: 1.9rem; /* Slightly larger for prominence */
+    font-weight: bolder; /* Keep bold */
+    color: #E24767; /* A shade of light blue similar to the image. You can fine-tune this. */
 }
 
 .menu-toggle {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  user-select: none;
+    display: none; /* Hidden on desktop */
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    color: #333; /* Ensure it's visible if it appears on mobile */
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Increased gap for more spacing between links, matching the image */
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-  transition: color 0.3s;
+    text-decoration: none; /* Ensures no underline */
+    color: #333; /* Dark gray for the links */
+    font-weight: 600; /* Keeps a good weight */
+    font-size: 1.05rem; /* Slightly larger font size for readability and prominence */
+    font-family: 'Arial', sans-serif; /* Changed to a common sans-serif font */
+    transition: color 0.3s ease; /* Smooth transition for hover */
 }
 
 .nav-links a:hover {
-  color: #007bff;
+    color: #007bff; /* You can keep your existing hover color or change it to match a scheme */
 }
 
-/* Mobile styles */
+/* --- Mobile styles (Keep your existing mobile styles, they are good!) --- */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
+    .menu-toggle {
+        display: block; /* Show hamburger on mobile */
+    }
 
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
-    flex-direction: column;
-    display: none;
-    text-align: center;
-    padding: 1rem 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ffffff; /* White background for mobile menu */
+        flex-direction: column;
+        display: none; /* Hidden by default on mobile */
+        text-align: center;
+        padding: 1rem 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #eee; /* Optional: add a subtle border */
+    }
 
-  .nav-links.open {
-    display: flex;
-  }
+    .nav-links.open {
+        display: flex; /* Show when open */
+    }
 
-  .nav-links li {
-    margin: 0.5rem 0;
-  }
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .navbar-container {
+        /* Remove max-width and margin auto for mobile to allow full width */
+        max-width: unset;
+        margin: unset;
+        padding: 0 1rem; /* Adjust padding for mobile if needed */
+    }
+
+    .navbar {
+        padding: 1rem; /* Adjust overall navbar padding for mobile if needed */
+    }
 }

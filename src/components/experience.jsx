@@ -4,14 +4,20 @@ import '../styles/experience.css';
 
 function Experience() {
   return (
-    <section className="experience" id="experience">
-      <h2>{experienceData.heading}</h2>
-      <div className="experience-list">
-        {experienceData.jobs.map((job, index) => (
-          <div className="job" key={index}>
-            <h3>{job.title} @ {job.company}</h3>
-            <p className="duration">{job.duration}</p>
-            <p>{job.description}</p>
+    <section id="experience" className="experience-section">
+      <h2>Ex<b>perie</b>nce</h2>
+      <div className="experience-grid">
+        {experienceData.map((exp, index) => (
+          <div key={index} className="experience-card">
+            <h3 className="experience-title">{exp.title}</h3>
+            <p className="experience-organization">{exp.organization}</p>
+            <p className="experience-date">{exp.date}</p>
+            <p className="experience-description">{exp.description}</p>
+            <div className="experience-tech">
+              {exp.technologies.map((tech, i) => (
+                <span key={i} className="tech-badge">{tech}</span>
+              ))}
+            </div>
           </div>
         ))}
       </div>

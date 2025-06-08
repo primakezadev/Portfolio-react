@@ -53,21 +53,7 @@ function Contact() {
           📧 Email: <a href={`mailto:${contactData.email}`}>{contactData.email}</a>
         </p>
         <p>📍 Location: {contactData.location}</p>
-        <p>
-          Social:{' '}
-          {contactData.socialLinks.map((social) => (
-            <a
-              key={social.name}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-              aria-label={social.name}
-            >
-              {social.name}
-            </a>
-          ))}
-        </p>
+      
       </div>
 
       {/* Contact Form */}

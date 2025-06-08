@@ -1,17 +1,35 @@
-{
-  "heading": "Projects",
-  "projects": [
-    {
-      "name": "EACReservation",
-      "description": "A reservation system built with React and Express to manage bookings across East African countries.",
-      "tech": ["React", "Node.js", "Express", "MongoDB"],
-      "link": "https://github.com/primakezadev/Reservation.git"
-    },
-    {
-      "name": "Blog API",
-      "description": "A RESTful blog API with authentication and password reset functionality using Node.js and PostgreSQL.",
-      "tech": ["Node.js", "Express", "PostgreSQL", "JWT"],
-      "link": "https://github.com/primakezadev/Blog_AP.git"
-    }
-  ]
-}
+[
+  {
+    "title": "Blog API with Authentication",
+    "image": "/images/api.png",
+    "description": "A full-featured REST API for a blogging platform. Includes user registration, login, email verification, forgot/reset password, and post CRUD operations.",
+    "technologies": ["Node.js", "Express", "TypeScript", "PostgreSQL", "JWT", "Nodemailer"],
+    "github": "https://github.com/primakezadev/blog-api",
+    "demo": ""
+  },
+  {
+    "title": "EACReservation Dashboard",
+     "image": "/images/reserve.jpg",
+    "description": "A React-based admin dashboard for managing seat reservations at EAC events. Includes UI for viewing bookings and user activity.",
+    "technologies": ["React", "JavaScript", "CSS", "JSON"],
+    "github": "https://github.com/primakezadev/eac-reservation",
+    "demo": ""
+  },
+  {
+    "title": "Inventory Management System",
+     "image": "/images/inventory.png",
+    "description": "A TypeScript console-based project showcasing object-oriented programming for tracking stock levels, adding and updating items, and reporting.",
+    "technologies": ["TypeScript", "OOP"],
+    "github": "https://github.com/primakezadev/inventory-management-ts",
+    "demo": ""
+  },
+
+  {
+    "title": "React Portfolio Website",
+     "image": "/images/portfolio.jpg",
+    "description": "A single-page portfolio site built with React, showcasing personal projects, experience, and contact form. Built with hooks, JSON-based content, and custom CSS.",
+    "technologies": ["React", "CSS", "JavaScript", "Hooks"],
+    "github": "https://github.com/primakezadev/portfolio-react",
+    "demo": "https://primakezadev.netlify.app"
+  }
+]

@@ -1,9 +1,9 @@
-
 {
-  "heading": "About Me",
+  "heading": "ABOUT ME",
+  "subheading": "Prima - Developer", 
+  "photo": "prof.png", 
   "paragraphs": [
-    "I'm a passionate frontend developer with a love for crafting elegant and accessible user experiences.",
-    "I enjoy turning complex problems into simple, beautiful interfaces using modern web technologies like React and CSS.",
-    "Beyond coding, I value design thinking, attention to detail, and building products that people love to use."
+   "Hi, I'm Prima—a passionate and detail-oriented web developer with a strong foundation in modern web technologies. I specialize in building responsive, accessible, and user-friendly applications using React, TypeScript, Node.js, and Express. Through hands-on experience and personal projects, I've developed skills in full-stack development, RESTful API design, and UI/UX design. I'm always eager to learn, solve real-world problems through code, and contribute to meaningful digital experiences. Whether it's backend logic or frontend interfaces, I love turning ideas into clean, functional products"
+   
   ]
 }

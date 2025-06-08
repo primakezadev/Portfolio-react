@@ -1,17 +1,44 @@
-{
-  "heading": "Experience",
-  "jobs": [
-    {
-      "title": "Frontend Developer Intern",
-      "company": "TechVerse Ltd.",
-      "duration": "Jan 2024 – Apr 2024",
-      "description": "Worked with a team to build responsive web interfaces using React, implemented reusable components, and optimized for performance."
-    },
-    {
-      "title": "Freelance Web Designer",
-      "company": "Self-Employed",
-      "duration": "2022 – Present",
-      "description": "Designed and developed modern websites for small businesses and personal brands using HTML, CSS, and JavaScript."
-    }
-  ]
-}
+[
+  {
+    "title": "Full-Stack Web Development Trainee",
+    "organization": "Self-Guided / Online Training",
+    "date": "Jan 2025 – Present",
+    "description": "Actively building real-world applications using modern web technologies. Completed several hands-on projects focused on frontend and backend development. Gained strong understanding of Git workflows, API design, database integration, and responsive UI development.",
+    "technologies": ["React", "TypeScript", "Node.js", "Express", "MongoDb", "CSS", "Git"]
+  },
+  {
+    "title": "React Portfolio Website",
+    "organization": "Personal Project",
+    "date": "Jun 2025",
+    "description": "Built a responsive, single-page React application to showcase skills and projects. Used JSON for data structure and pure CSS for styling. Designed and implemented a dynamic portfolio layout featuring sections like Hero, About, Projects, and Contact.",
+    "technologies": ["React", "CSS", "JSON"]
+  },
+  {
+    "title": "Blog API with Authentication",
+    "organization": "Personal Project",
+    "date": "May 2025",
+    "description": "Developed a RESTful API for a blog platform with user authentication, password reset via email, and CRUD functionality. Applied layered architecture with controllers, services, and custom error handling. Integrated PostgreSQL and email sending with Nodemailer.",
+    "technologies": ["Node.js", "Express", "TypeScript", "PostgreSQL", "JWT", "Nodemailer"]
+  },
+  {
+    "title": "Library Management System (OOP Practice)",
+    "organization": "Personal Project",
+    "date": "May 2025",
+    "description": "Created a library system to manage books and users using TypeScript classes. Demonstrated object-oriented design principles like encapsulation, inheritance, and polymorphism.",
+    "technologies": ["TypeScript", "OOP"]
+  },
+  {
+    "title": "Inventory Management System",
+    "organization": "Personal Project",
+    "date": "May 2025",
+    "description": "Designed an inventory tracker using class-based TypeScript to manage stock levels and product data. Applied interface-based design for flexibility and clean separation of logic.",
+    "technologies": ["TypeScript", "OOP"]
+  },
+  {
+    "title": "Content Creator (Tech Niche - UK TikTok Region)",
+    "organization": "Independent",
+    "date": "Mar 2025 – Present",
+    "description": "Built engaging content with consistent visuals and voice targeting UK-region TikTok users. Developed strategic planning skills and digital creativity. Experimenting with different formats and ideas to grow audience and improve reach.",
+    "technologies": ["Content Strategy", "Video Editing", "TikTok Analytics"]
+  }
+]

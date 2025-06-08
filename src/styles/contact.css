@@ -1,121 +1,236 @@
+/* General section styling */
 .contact-section {
-  padding: 4rem 2rem;
-  background: #f9f9f9;
-  text-align: center;
+    padding: 80px 40px;
+    background-color: #f8f8f8; /* Consistent light background */
+    color: #333;
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif; /* Add a fallback font, or use your main font */
 }
 
+/* Main Heading */
 .contact-section h2 {
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #333;
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    color: #222;
+    font-weight: 700;
 }
 
+/* Container for contact info and form (two-column layout on desktop) */
+.contact-section > div:not(.form-group):not(.success):not(.error) { 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; /* Form left, info right on desktop */
+    justify-content: center;
+    gap: 60px;
+    /* --- REDUCED CONTAINER MAX-WIDTH HERE --- */
+    max-width: 800px; /* Reduced from 900px to make the overall section narrower */
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* Contact Information Styling */
+.contact-info {
+    flex: 1; /* Retain flex: 1 */
+    min-width: 280px;
+    text-align: left;
+    padding: 25px 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    order: 2; /* Place contact-info second (right) on desktop */
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info p:last-of-type {
+    margin-bottom: 0;
+}
+
+.contact-info p a {
+    color: #E24767; /* Pink/red accent for links */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-info p a:hover {
+    color: #C73B5B; /* Darker pink on hover */
+    text-decoration: underline;
+}
+
+/* Social Links */
+.contact-info .social-link {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #666; /* Default social icon color */
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.contact-info .social-link:hover {
+    color: #E24767; /* Pink/red on hover */
+}
+
+
+/* Contact Form Styling */
 form {
-  max-width: 500px;
-  margin: 0 auto;
-  text-align: left;
+    /* --- ADJUSTED FLEX VALUE HERE --- */
+    flex: 1.2; /* Changed from 2 to 1.2 to make it less dominant than previously, but still slightly larger than contact-info */
+    min-width: 320px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    order: 1; /* Place form first (left) on desktop */
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
 }
 
-input,
-textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-input:focus,
-textarea:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-.error {
-  color: red;
-  font-size: 0.85rem;
-  margin-top: 0.25rem;
-  display: block;
-}
-
-.success {
-  color: green;
-  font-size: 1rem;
-  margin-top: 1rem;
-}
-
-button {
-  background: #007bff;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background: #0056b3;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .contact-section {
-    padding: 2rem 1rem;
-  }
-
-  form {
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
     width: 100%;
-  }
-}
-.contact-section {
-  padding: 2rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.form-group {
-  margin-bottom: 1rem;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fcfcfc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
-input, textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: #E24767; /* Pink/red border on focus */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(226, 71, 103, 0.2); /* Subtle pink glow on focus */
 }
 
-button {
-  padding: 0.6rem 1.2rem;
-  background: #222;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
 }
 
-button:hover {
-  background: #555;
+/* Submit Button */
+button[type="submit"] {
+    background-color: #E24767; /* Pink/red accent color */
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
+button[type="submit"]:hover {
+    background-color: #C73B5B; /* Darker pink on hover */
+    transform: translateY(-2px);
+}
+
+/* Validation and Success Messages */
 .error {
-  color: red;
-  font-size: 0.9rem;
+    color: #cc4444; /* Slightly softer red for errors */
+    font-size: 0.85rem; /* Slightly smaller font size */
+    margin-top: 0.4rem; /* Reduced margin */
+    display: block;
+    text-align: left; /* Aligned to the left for a less aggressive feel */
 }
 
 .success {
-  color: green;
-  margin-top: 1rem;
+    color: #28a745;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    font-weight: 600;
 }
 
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .contact-section {
+        padding: 60px 20px;
+    }
+    .contact-section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+    .contact-section > div:not(.form-group):not(.success):not(.error) {
+        flex-direction: column; /* Stack info and form on medium screens */
+        gap: 40px;
+        align-items: center;
+        max-width: 500px; /* Adjust max-width for stacked elements */
+    }
+    .contact-info, form {
+        order: unset; /* Reset order to default for stacked layout */
+        min-width: unset;
+        width: 100%;
+        max-width: 500px;
+    }
+    .contact-info {
+        text-align: center;
+    }
+    .contact-info p {
+        justify-content: center;
+    }
+    .contact-info .social-link {
+        margin: 0 10px;
+    }
+    form {
+        padding: 25px;
+    }
+    .form-group label {
+        text-align: left; /* Keep labels left-aligned even when stacked */
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-section {
+        padding: 40px 15px;
+    }
+    .contact-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    .contact-info, form {
+        padding: 20px;
+    }
+    button[type="submit"] {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    .form-group input, .form-group textarea {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+    .error, .success {
+        font-size: 0.8rem;
+    }
+}

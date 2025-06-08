@@ -1,21 +1,152 @@
-.about {
-  padding: 4rem 2rem;
-  background-color: #ffffff;
-  color: #333;
-  max-width: 800px;
-  margin: 0 auto;
+/* General section styling */
+.about-section {
+    padding: 80px 40px; /* More padding for better spacing */
+    background-color: #f8f8f8; /* Very light background for contrast */
+    color: #333;
+    max-width: 1200px; /* Wider max-width for content */
+    margin: 0 auto; /* Center the section on large screens */
+    text-align: center; /* Default for heading */
 }
 
-.about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: #222;
+/* Main Heading Styling */
+.about-header {
+    margin-bottom: 40px; /* Space below header */
 }
 
-.about p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  text-align: justify;
+.about-header h2 {
+    font-size: 2.8rem; /* Larger heading */
+    margin-bottom: 0.5rem;
+    color: rgb(240, 64, 93);
+    font-weight: 700;
 }
+
+.about-subheading {
+    font-size: 1.1rem;
+    color: #777; /* Lighter color for subheading */
+    margin-top: 0;
+}
+
+/* Two-column layout for image and text */
+.about-content-wrapper {
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Vertically align items in the center */
+    gap: 60px; /* Space between the two columns */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center items when they wrap */
+    padding-top: 40px; /* Space from the main heading */
+}
+
+/* Image Container (Left Column) */
+.about-image-container {
+    flex: 0 0 auto; /* Don't grow, don't shrink, base on content */
+    width: clamp(200px, 30vw, 300px); /* Responsive width */
+    height: clamp(200px, 30vw, 300px); /* Responsive height for circular shape */
+    border-radius: 50%; /* Make it circular */
+    overflow: hidden; /* Hide parts of the image outside the circle */
+    position: relative; /* For the border pseudo-element */
+    display: flex; /* To center image if needed within its container */
+    justify-content: center;
+    align-items: center;
+    margin-right: 300px;/* Space on mobile */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Circular border effect */
+.about-image-container::before {
+    content: '';
+    position: absolute;
+    top: -15px; /* Adjust to create an outer border effect */
+    left: -15px; /* Adjust to create an outer border effect */
+    right: -15px;
+    bottom: -15px;
+    border: 5px solid #E24767; /* Pink/red border color */
+    border-radius: 50%; /* Ensure the border is also circular */
+    z-index: -1; /* Place behind the image */
+}
+
+/* Image itself */
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container, cropping as needed */
+    display: block; /* Remove extra space below image */
+}
+
+/* Text Container (Right Column) */
+.about-text-container {
+    flex: 1; /* Allow text container to grow and shrink */
+    max-width: 600px; /* Limit max width for readability */
+    text-align: left; /* Align text to the left */
+}
+
+.about-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+/* Social Links Styling */
+.about-social-links {
+    display: flex; /* Arrange icons horizontally */
+    gap: 20px; /* Space between icons */
+    margin-top: 30px; /* Space above social links */
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.social-icon-link {
+    font-size: 1.8rem; /* Size of the icons */
+    color: #666; /* Default icon color */
+    transition: color 0.3s ease;
+    text-decoration: none; /* Remove underline from links */
+}
+
+.social-icon-link:hover {
+    color: #E24767; /* Pink/red on hover */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 60px 20px;
+    }
+
+    .about-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-subheading {
+        font-size: 1rem;
+    }
+
+    .about-content-wrapper {
+        flex-direction: column; /* Stack columns on smaller screens */
+        gap: 30px;
+    }
+
+    .about-image-container {
+        width: 200px; /* Fixed size for mobile image */
+        height: 200px;
+        margin-bottom: 0; /* Remove extra margin when stacked */
+    }
+
+    .about-image-container::before {
+        top: -10px; /* Adjust border thickness */
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        border-width: 4px; /* Thinner border for mobile */
+    }
+
+    .about-text-container {
+        text-align: center; /* Center text when stacked */
+        max-width: 100%;
+    }
+
+    .about-social-links {
+        justify-content: center; /* Center social links on mobile */
+        margin-top: 20px;
+    }
+}
+
+
