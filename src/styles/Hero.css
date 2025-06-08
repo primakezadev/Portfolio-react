@@ -1,0 +1,12 @@
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+ background-color: rgb(240, 243, 247);
+  color: black;
+ 
+}
+
+.hero-img {
+  width: 150px;
+  border-radius: 50%;
+}
